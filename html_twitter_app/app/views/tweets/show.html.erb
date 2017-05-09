@@ -4,6 +4,9 @@
 
 
 Tweet by: <%= @tweet.user.username %>
-
-
+<br>
+Tweet created: <%= @tweet.created_at %>
+<br>
+Tweet created: <%= @tweet.created_at.strftime("%d %b %Y at %I:%M %p") %>
+<br>
 <!-- link back to user from here -->

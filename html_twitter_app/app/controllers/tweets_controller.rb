@@ -1,8 +1,10 @@
 class TweetsController < ApplicationController
 
-  # def index
-  #   @users = User.all
-  # end
+  #before_action :require_login
+
+  def index
+    @tweets = Tweet.all
+  end
 
   def new
     @tweet = Tweet.new

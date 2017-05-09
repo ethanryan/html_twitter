@@ -1,0 +1,16 @@
+<h1>All Tweets</h1>
+eventually this will be homepage
+<p>and instead of all tweets, this will show all the tweets of whomever the user follows (plus the user's)</p>
+
+<h3>Current User: <%= @tweets.first.user.username %></h3>
+<h3>Create New Tweet: <%= link_to "New Tweet", new_tweet_path(@tweets) %></h3>
+
+<ul>
+  <% @tweets.reverse.each do |tweet| %>
+  <strong><%= link_to tweet.user.username, user_path(tweet.user_id) %></strong>
+  <%= tweet.created_at.strftime("%d %b %Y at %I:%M %p") %>
+  <p><%= tweet.content %></p>
+  -------------------------------------------------------
+  <br><br>
+    <% end %>
+</ul>
