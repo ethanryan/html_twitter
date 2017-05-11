@@ -1,6 +1,8 @@
 <h1>Profile Page for <%= @user.username %></h1>
 
-<p><%= @user.username %></p>
+<h2><%= link_to "Home", tweets_path(@tweets) %></h2>
+
+<strong><p>Hi, <%= @user.username %></p></strong>
 
 <% @user.tweets.reverse.each do |tweet| %>
 <!-- above is adding all the tweets for each user under their username -->
